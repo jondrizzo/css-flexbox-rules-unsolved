@@ -11,7 +11,12 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: row;
+align-items: flex-start;
+  gap: 0px;
   padding: 30px;
+  width: 100%;
 }
 
 h2 {
@@ -24,31 +29,107 @@ p {
 
 /* 👇👇👇  ADD YOUR FORM STYLES BENEATH  👇👇👇*/
 
+
 form {
-  border: 1px solid #a9a9a9;
-  padding: 20px;
+border: 1px solid #ccc;
+  padding: 30px;
+  background-color: #fafafa;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  
+}
+
+.sign-in-form-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.sign-up-form-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-form-container {
+ display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  height: 30px;
+  width: 24%
+}
+
+#sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.form-input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-style: bold;
+  font-weight: 600;
+  width: 100%;
+}
+
+#sign-in-form {
+  flex-direction: column;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-checkbox-control {
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: row;
+  display: flex;
+  
+}
+
+.form-submit-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 6px;
 }
 
 .subtext {
-  color: #a9a9a9;
-  font-weight: unset;
+  color: #c5c1c1;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  height: 30px;
+
 }
 
 #sign-in,
 #sign-up {
-  width: 100%;
+ width: 45%;
+  min-width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 12px;
 }
+
 
 a {
   color: #335eea;
   text-decoration: none;
+
 }
 
-label {
-  font-weight: bold;
-}
 
 input {
+  display: flex;
   width: 100%;
   height: 30px;
   padding: 5px;
@@ -82,4 +163,35 @@ input[type="submit"]:hover {
 
 .form select {
   height: 30px;
+}
+
+.form-group-horizontal-control{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-group-vertical-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-radio-control {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px;
+  font-weight: normal;
+}
+
+#sign-up-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500%;
+}
+
+.Gender {
+font-style: normal;
+font-weight: normal;
 }

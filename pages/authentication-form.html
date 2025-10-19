@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/authentication-form.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/authentication-form.css">
     <title>Login and Signup</title>
   </head>
   <body class="bg-white">
@@ -23,104 +23,128 @@
     </header>
     <div class="content">
       <div id="sign-in">
-        <div class="form-header">
+        <div class="sign-in-form-header">
           <h2>Sign in</h2>
           <p class="subtext">for existing users</p>
         </div>
         <!-- Sign IN form starts here -->
-        <form id="sign-in-form">
+        <div class="sign-in-form-container">
+        <form id="sign-in-form" action="#">
           <div class="form-input-control">
             <label for="login-field">Login</label>
             <input
+              name="email"
               type="email"
               id="login-field"
-              placeholder="use your email as login"
+              placeholder="name@domain.zone"
               required
-            />
-          </div>
+              >
+        </div>
           <div class="form-input-control">
             <label for="password-field">Password</label>
             <input
               type="password"
+              name="password"
               id="password-field"
               placeholder="passwords must match"
               minlength="8"
+              maxlength="20"
               required
-            />
+              >
           </div>
           <div class="form-checkbox-control">
-            <input type="checkbox" id="stay-signed-in" />
+            <input type="checkbox" id="stay-signed-in">
             <label for="stay-signed-in">Stay signed in</label>
           </div>
-          <hr />
+          <hr>
           <div class="form-submit-control">
-            <input type="submit" value="Sign in" />
+            <input
+            type="submit"
+            value="Sign in"
+            name="Sign in"
+            id="Sign in"
+            >
+            
             <a href="/#">Forgot your password?</a>
           </div>
         </form>
+        </div>  
+        </div>
         <!-- Sign IN form ends here -->
-      </div>
       <div id="sign-up">
-        <div class="form-header">
+        <div class="sign-up-form-header">
           <h2>Sign up</h2>
           <p class="subtext">for new users</p>
         </div>
         <!-- Sign UP form starts here -->
-        <form id="sign-up-form">
+        
+          <div class="sign-up-form-container">
+        <form id="sign-up-form" action="#">
           <div class="form-input-control">
             <label for="name-field">Your name</label>
             <input
               type="text"
               id="name-field"
+              name="name-field"
               minlength="5"
               placeholder="ex.: John Doe"
               required
-            />
-          </div>
+              >
+        </div>
           <div class="form-input-control">
             <label for="email">Email</label>
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="name@domain.zone"
               required
-            />
+              >
           </div>
           <div class="form-input-control">
             <label for="password">Password</label>
             <input
               type="password"
               id="password"
+              name="password"
               placeholder="8 characters minimum"
               minlength="8"
               maxlength="20"
               required
-            />
+              >
           </div>
           <div class="form-input-control">
             <label for="confirm-password">Confirm Password</label>
             <input
               type="password"
               id="confirm-password"
+              name="confirm-password"
               placeholder="passwords must match"
               minlength="8"
               maxlength="20"
               required
-            />
+              >
           </div>
           <div class="form-input-control">
             <label for="phone">Phone number</label>
             <input
               type="tel"
               id="phone"
+              name="phone"
               minlength="12"
               maxlength="12"
               placeholder="ex.: +12336456355"
-            />
+              pattern="^\+\d{12}$"
+              required
+              >
           </div>
           <div class="form-input-control">
             <label for="avatar">Avatar</label>
-            <input type="file" id="avatar" />
+            <input
+             type="file"
+             id="avatar"
+             name="avatar"
+             accept="image/png, image/jpeg">
           </div>
           <div class="form-group-horizontal-control">
             <div class="form-input-control">
@@ -143,14 +167,14 @@
             </div>
           </div>
           <div class="form-input-control">
-            <p>Gender</p>
+            <p class="Gender">Gender</p>
             <div class="form-group-vertical-control">
               <div class="form-radio-control">
-                <input type="radio" id="male" name="gender" value="male" />
+                <input type="radio" id="male" name="gender" value="male">
                 <label for="male">Male</label>
               </div>
               <div class="form-radio-control">
-                <input type="radio" id="female" name="gender" value="female" />
+                <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
               </div>
               <div class="form-radio-control">
@@ -160,16 +184,17 @@
                   name="gender"
                   value="other"
                   checked
-                />
+                  >
                 <label for="other">Other</label>
               </div>
+              </div>
             </div>
-          </div>
-          <hr />
+          <hr>
           <div class="form-submit-control">
-            <input type="submit" value="Sign up" />
-          </div>
-        </form>
+            <input type="submit" value="Sign up">
+            </div>
+          </form>
+        </div>
         <!-- Sign UP form ends here -->
       </div>
     </div>
